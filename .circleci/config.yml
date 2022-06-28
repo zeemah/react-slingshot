@@ -7,6 +7,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run:
           name: Build App
           command: npm run lint
@@ -15,6 +16,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
+      - run: npm i
       - run:
           name: Test App
           command: npm run test
